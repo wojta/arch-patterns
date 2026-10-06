@@ -149,3 +149,20 @@ tasks.withType<Detekt>().configureEach {
         html.required.set(true)
     }
 }
+
+dependencyCheck {
+    failBuildOnCVSS = 7.0f
+    formats = listOf("HTML", "JSON")
+    suppressionFile = "$projectDir/gradle/dependency-check/suppression.xml"
+    scanConfigurations = listOf("jvmCompileClasspath", "jvmRuntimeClasspath")
+    nvd {
+        apiKey = System.getenv("NVD_API_KEY") ?: localProperties["nvd.apiKey"] as String?
+    }
+    analyzers {
+        ossIndex {
+            enabled = true
+            password = System.getenv("OSS_INDEX_TOKEN") ?: localProperties["ossIndex.token"] as String?
+            url = "https://api.guide.sonatype.com"
+        }
+    }
+}
