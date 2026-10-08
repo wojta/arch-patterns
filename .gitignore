@@ -18,6 +18,7 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/gradle/wrapper/gradle-wrapper.jar
 .gradletasknamecache
+gradle-app.setting
 
 # Kotlin
 .kotlin/
@@ -26,12 +27,14 @@ kotlin-js-store/
 # Node / JS
 node_modules/
 
-# IntelliJ IDEA
+# IntelliJ IDEA & Eclipse
 .idea/
 *.iml
 *.iws
 *.ipr
 out/
+.project
+.classpath
 
 # Android / Native
 .externalNativeBuild/
