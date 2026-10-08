@@ -4,11 +4,45 @@
 # Log file
 *.log
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# Virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-local.properties
-.idea
-.gradle
-build
 
-node_modules
+# Local configuration
+local.properties
+.env
+
+# Gradle
+.gradle/
+build/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/gradle/wrapper/gradle-wrapper.jar
+.gradletasknamecache
+
+# Kotlin
+.kotlin/
+kotlin-js-store/
+
+# Node / JS
+node_modules/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Android / Native
+.externalNativeBuild/
+.cxx/
+captures/
+*.apk
+*.aar
+*.aab
+*.keystore
+*.jks
+
+# OS
+.DS_Store
+Thumbs.db
