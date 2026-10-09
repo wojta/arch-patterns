@@ -3,13 +3,17 @@ detekt = "1.23.8"
 dokka = "2.2.0"
 kotlin = "2.4.20"
 kotlinCoroutines = "1.11.0"
+kotest = "6.2.5"
 kover = "0.9.9"
 maven-publish = "0.37.0"
 owasp-dependencycheck = "13.0.0"
 
 [libraries]
 kotlin-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinCoroutines" }
+
+#test
 kotlin-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinCoroutines" }
+kotest = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
 
 [plugins]
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }

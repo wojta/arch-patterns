@@ -44,7 +44,7 @@ sealed interface Result<out OK, out FAIL> {
         suspend fun <OK, FAIL> catching(
                 call: suspend () -> OK,
                 onError: (Throwable) -> FAIL
-        ): Result<OK, FAIL> = runCatching {
+        ): Result<OK, FAIL> = runCatchingCancellable {
             Ok(call())
         }.getOrElse {
             Fail(onError(it))
