@@ -47,7 +47,7 @@ repositories {
 }
 
 kotlin {
-    jvmToolchain(25)
+    jvmToolchain(17)
     jvm()
     js {
         browser()
@@ -146,6 +146,7 @@ detekt {
 }
 
 tasks.withType<Detekt>().configureEach {
+    jvmTarget = "17"
     reports {
         html.required.set(true)
     }
