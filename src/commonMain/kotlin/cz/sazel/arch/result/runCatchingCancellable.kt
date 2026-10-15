@@ -8,6 +8,7 @@ import kotlin.coroutines.cancellation.CancellationException
 /**
  * Like [runCatching], but rethrows [CancellationException] and fatal errors (see [isFatal]),
  * so a cancelled coroutine is not turned into an ordinary failure.
+ * Inspired by article https://kt.academy/article/runCatching
  */
 @OptIn(ExperimentalContracts::class)
 @Suppress("TooGenericExceptionCaught", "InstanceOfCheckForException")
